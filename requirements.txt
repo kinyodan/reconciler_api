@@ -1,0 +1,9 @@
+fastapi 
+uvicorn 
+pytest 
+requests 
+pandas
+fastapi-pagination[all]
+filetype
+faker
+httpx
