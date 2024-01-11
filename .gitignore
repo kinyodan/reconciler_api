@@ -1,6 +1,7 @@
 
 reports/
 uploads/
+.ruff_cache/
 
 # Compiled source #
 ###################
