@@ -6,11 +6,12 @@ A Fast API  application in Python .
 
 - Python 3
 
-##  extract from zip file named lumkani_project 
+## git clone or download as zip and  extract from zip file find folder named credrails 
 
 
 ### Install dependencies
 
+ CD into the credrails_api directory and run
 ```
 pip install -r requirements.txt;
 ```
