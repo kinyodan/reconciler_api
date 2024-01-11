@@ -34,6 +34,13 @@ pytest
 
 this will run the test_main.py file 
 
+# ## You can generate larger csv files for testing the application.
+
+When application server is up and runnig make a "Get" api call to </br>
+"/genarate_test_csv_files" path an dit will generate test csvs files  </br> for source and target csv that are as large as you want  </br>
+the  default is 10000 records  </br>and the files will be found inside the root folder in folder named "test_csv_files"
+
+
 
 
 
