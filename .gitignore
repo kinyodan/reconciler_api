@@ -1,6 +1,4 @@
 
-reports/
-uploads/
 .ruff_cache/
 __pycache__/
 
