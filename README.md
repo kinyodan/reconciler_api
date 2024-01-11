@@ -34,16 +34,6 @@ pytest
 
 this will run the test_main.py file 
 
-```
 
-```
 
-### Run server
-
-To run the development server use
-cd into credrails folder and use
-
-```
-uvicorn main:app --reload 
-```
 
