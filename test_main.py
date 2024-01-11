@@ -39,8 +39,33 @@ def test_upload_data_files_without_any_file_input():
         ]
     }
 
+def test_upload_data_files_without_only_source_file_input():
+    test_source_upload_file = "test_csv_files/source-test.csv"
 
-def test_upload_data_files_without_any_file_input():
+    with open(test_source_upload_file, "rb") as source:
+            response = credrails_client.post(
+                "/upload_data_files",
+                files={"source": ("source", source, "text/csv"), "target": ""})
+            assert response.status_code == 415
+            assert response.json() == {
+                "detail": "Unsupported file type => Target file"
+                }
+
+
+def test_upload_data_files_without_only_target_file_input():
+    test_target_upload_file = "test_csv_files/target-test.csv"
+
+    with open(test_target_upload_file, "rb") as target:
+            response = credrails_client.post(
+                "/upload_data_files",
+                files={"target": ("target", target, "text/csv"), "source": ""})
+            assert response.status_code == 415
+            assert response.json() == {
+                "detail": "Unsupported file type => Source file"
+                }
+
+
+def test_upload_data_files_with_file_input():
     test_source_upload_file = "test_csv_files/source-test.csv"
     test_target_upload_file = "test_csv_files/target-test.csv"
 
