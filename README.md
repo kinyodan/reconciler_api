@@ -19,7 +19,7 @@ pip install -r requirements.txt;
 ### Run server
 
 ```
-uvicorn app.main:app --reload
+uvicorn main:app --reload
 ```
 
 # ## Run test
